@@ -1,3 +1,5 @@
+import("/settings/settings.js");
+
 // Function to create and show the full-screen overlay
 function triggerPause(durationSeconds, messageText) {
   // Prevent duplicate overlays
@@ -5,7 +7,7 @@ function triggerPause(durationSeconds, messageText) {
 
   const overlay = document.createElement("div");
   overlay.id = "breathe-overlay";
-  
+
   // Style overlay to cover the whole screen and block interaction
   Object.assign(overlay.style, {
     position: "fixed",
@@ -54,11 +56,18 @@ function triggerPause(durationSeconds, messageText) {
   }, 1000);
 }
 
-// 1. Initial 1-second pause on page load
-triggerPause(5, "Take a breath...");
+console.log(window.location.hostname);
+console.log(blockedURLs);
+
+// Check for url matching list
+if (blockedURLs.includes(window.location.hostname)) {
+  triggerPause(5, "Take a breath...");
+}
+
+
 
 // 2. Periodic pause every 15 minutes (900,000 ms)
-const RECURRING_INTERVAL_MS = 1 * 60 * 1000; 
+const RECURRING_INTERVAL_MS = 1 * 60 * 1000;
 setInterval(() => {
   triggerPause(5, "Time for a quick check-in. Still want to be here?");
 }, RECURRING_INTERVAL_MS);
