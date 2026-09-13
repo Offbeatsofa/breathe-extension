@@ -3,15 +3,15 @@
     "name": "Breathe",
     "version": 1.0,
 
-    "description": "Pauses before opening distracting websites", // TODO
+    "description": "Pauses before opening distracting websites", 
 
     "icons": {
-        // TODO
+        
     },
 
     "browser_specific_settings": {
         "gecko": {
-            "id": "", // TODO
+            "id": "Offbeatsofa@tuckerdrown.com", 
             "data_collection_permissions": {
                 "required": ["none"]
             }
@@ -20,8 +20,13 @@
 
     "content_scripts": [
         {
-            "matches": [""], // TODO
-            "js": [""] //TODO
+            "matches": [
+                "*://*.youtube.com",
+                "*://*.reddit.com",
+                "*://*.instagram.com"
+            ], 
+            "js": ["block.js"],
+            "run_at": ["document_start"]
         }
     ]
 }
