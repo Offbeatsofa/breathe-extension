@@ -1,10 +1,10 @@
 // Function to create and show the full-screen overlay
 function triggerPause(durationSeconds, messageText) {
   // Prevent duplicate overlays
-  if (document.getElementById("mindful-pause-overlay")) return;
+  if (document.getElementById("breathe-overlay")) return;
 
   const overlay = document.createElement("div");
-  overlay.id = "mindful-pause-overlay";
+  overlay.id = "breathe-overlay";
   
   // Style overlay to cover the whole screen and block interaction
   Object.assign(overlay.style, {
@@ -13,7 +13,7 @@ function triggerPause(durationSeconds, messageText) {
     left: "0",
     width: "100vw",
     height: "100vh",
-    backgroundColor: "rgba(15, 23, 42, 0.95)",
+    backgroundColor: "rgba(15, 23, 42, 1)",
     color: "#f8fafc",
     zIndex: "999999999",
     display: "flex",
@@ -33,6 +33,9 @@ function triggerPause(durationSeconds, messageText) {
   countdownNode.style.fontWeight = "bold";
   countdownNode.style.marginTop = "16px";
   overlay.appendChild(countdownNode);
+
+  // const countdownCircle = document.createElement("div");
+  // 
 
   // Append overlay before body renders completely if called early
   (document.body || document.documentElement).appendChild(overlay);
