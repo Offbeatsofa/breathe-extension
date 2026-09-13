@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Breathe",
-    "version": 1.0,
+    "version": "1.0",
 
     "description": "Pauses before opening distracting websites", 
 
@@ -21,12 +21,12 @@
     "content_scripts": [
         {
             "matches": [
-                "*://*.youtube.com",
-                "*://*.reddit.com",
-                "*://*.instagram.com"
+                "*://*.youtube.com/*",
+                "*://*.reddit.com/*",
+                "*://*.instagram.com/*"
             ], 
             "js": ["block.js"],
-            "run_at": ["document_start"]
+            "run_at": "document_start"
         }
     ]
 }

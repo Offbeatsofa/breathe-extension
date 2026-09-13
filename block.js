@@ -52,10 +52,10 @@ function triggerPause(durationSeconds, messageText) {
 }
 
 // 1. Initial 1-second pause on page load
-triggerPause(1, "Take a breath...");
+triggerPause(5, "Take a breath...");
 
 // 2. Periodic pause every 15 minutes (900,000 ms)
-const RECURRING_INTERVAL_MS = 15 * 60 * 1000; 
+const RECURRING_INTERVAL_MS = 1 * 60 * 1000; 
 setInterval(() => {
   triggerPause(5, "Time for a quick check-in. Still want to be here?");
 }, RECURRING_INTERVAL_MS);
