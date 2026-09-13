@@ -2,30 +2,26 @@
     "manifest_version": 3,
     "name": "Breathe",
     "version": "1.0",
-
-    "description": "Pauses before opening distracting websites", 
-
-    "icons": {
-        
-    },
-
+    "description": "Pauses before opening distracting websites",
+    "icons": {},
     "browser_specific_settings": {
         "gecko": {
-            "id": "Offbeatsofa@tuckerdrown.com", 
+            "id": "Offbeatsofa@tuckerdrown.com",
             "data_collection_permissions": {
-                "required": ["none"]
+                "required": [
+                    "none"
+                ]
             }
         }
     },
-
     "content_scripts": [
         {
             "matches": [
-                "*://*.youtube.com/*",
-                "*://*.reddit.com/*",
-                "*://*.instagram.com/*"
-            ], 
-            "js": ["block.js"],
+                "<all_urls>"
+            ],
+            "js": [
+                "block/block.js"
+            ],
             "run_at": "document_start"
         }
     ]
