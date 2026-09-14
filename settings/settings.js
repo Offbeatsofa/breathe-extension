@@ -5,5 +5,5 @@ const blockedURLs = [
     "www.facebook.com",
     "www.twitter.com",
     "www.tiktok.com",
-    "www.x.com/",
+    "www.x.com",
 ]
