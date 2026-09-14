@@ -8,20 +8,7 @@ function triggerPause(durationSeconds, messageText) {
 
   // Style overlay to cover the whole screen and block interaction
   Object.assign(overlay.style, {
-    position: "fixed",
-    top: "0",
-    left: "0",
-    width: "100vw",
-    height: "100vh",
-    backgroundColor: "rgba(15, 23, 42, 1)",
-    color: "#f8fafc",
-    zIndex: "999999999",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    fontFamily: "system-ui, sans-serif",
-    fontSize: "24px"
+
   });
 
   const textNode = document.createElement("div");
