@@ -59,9 +59,9 @@ console.log(blockedURLs);
 
 // Check for url matching list
 if (blockedURLs.includes(window.location.hostname)) {
-  triggerPause(5, "Take a breath...");
+  const extensionPageUrl = browser.runtime.getURL("block/block.html") + "?to=" + encodeURIComponent(window.location.href);
+  window.location.href = extensionPageUrl;
 }
-
 
 
 // 2. Periodic pause every 15 minutes (900,000 ms)
