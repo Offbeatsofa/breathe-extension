@@ -7,3 +7,5 @@ const blockedURLs = [
     "www.tiktok.com",
     "www.x.com",
 ]
+
+const blockTime = 20; // in seconds

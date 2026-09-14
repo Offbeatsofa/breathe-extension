@@ -24,7 +24,8 @@
 .timer-svg {
     width: 100%;
     height: 100%;
-    transform: rotate(-90deg) /* align ring vertically */
+    transform: rotate(-90deg)
+        /* align ring vertically */
 }
 
 circle {
@@ -33,15 +34,14 @@ circle {
 }
 
 .timer-track {
-    stroke: burlywood;
+    stroke: beige;
 }
 
 .timer-remaining {
     stroke: black;
     stroke-linecap: round;
-    stroke-dasharray: calc(2 * pi * 100px);
     stroke-dashoffset: 0;
-    transition: stroke-dashoffset 1s linear, stroke 0.3s ease;
+    /* transition: stroke-dashoffset 1s linear, stroke 0.3s ease; */
 }
 
 .timer-text {
