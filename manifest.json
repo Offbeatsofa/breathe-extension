@@ -20,19 +20,10 @@
                 "<all_urls>"
             ],
             "js": [
+                "settings/settings.js",
                 "block/block.js"
             ],
             "run_at": "document_start"
-        }
-    ],
-    "web_accessible_resources": [
-        {
-            "resources": [
-                "settings/settings.js"
-            ],
-            "matches": [
-                "<all_urls>"
-            ]
         }
     ]
 }

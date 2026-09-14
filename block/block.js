@@ -1,5 +1,3 @@
-import("/settings/settings.js");
-
 // Function to create and show the full-screen overlay
 function triggerPause(durationSeconds, messageText) {
   // Prevent duplicate overlays
