@@ -1,11 +1,14 @@
 const cleanHost = window.location.hostname.replace(/^www\./, "")
+const oldLink = window.location.href
+
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 console.log(cleanHost);
-console.log(blockedURLs);
 
 // Check for url matching list
 if (blockedURLs.includes(cleanHost)) {
   const extensionPageUrl = browser.runtime.getURL("block/block.html") + "?to=" + encodeURIComponent(window.location.href);
   window.location.href = extensionPageUrl;
+  console.log("redirected to block page");
 }
 
 // Function to create and show the full-screen overlay

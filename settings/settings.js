@@ -8,4 +8,4 @@ const blockedURLs = [
     "x.com",
 ]
 
-const blockTime = 20; // in seconds
+const blockTime = 5; // in seconds
