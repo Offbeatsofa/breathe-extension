@@ -1,11 +1,11 @@
 const blockedURLs = [
-    "www.youtube.com",
-    "www.reddit.com",
-    "www.instagram.com",
-    "www.facebook.com",
-    "www.twitter.com",
-    "www.tiktok.com",
-    "www.x.com",
+    "youtube.com",
+    "reddit.com",
+    "instagram.com",
+    "facebook.com",
+    "twitter.com",
+    "tiktok.com",
+    "x.com",
 ]
 
 const blockTime = 20; // in seconds
