@@ -34,7 +34,7 @@ circle {
 }
 
 .timer-track {
-    stroke: beige;
+    stroke: rgb(33, 34, 49);
 }
 
 .timer-remaining {
@@ -52,4 +52,35 @@ circle {
     /* font-family: ; */
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+.continueButton {
+    display: inline-block;
+    padding: 8px 15px;
+    max-width: 75px;
+    max-height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    background-color: #394e66;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    :hover {
+        background-color: #283545;
+    }
+    :active {
+        transform: scale(0.98);
+    }
+    .btn:focus-visible {
+        outline: 3px solid #89c2ff;
+    }
+}
+
+.hidden {
+    display: none;
 }

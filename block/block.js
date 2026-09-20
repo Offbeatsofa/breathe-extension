@@ -1,6 +1,6 @@
 const cleanHost = window.location.hostname.replace(/^www\./, "")
 const unblockedHost = sessionStorage.getItem("unblocked_host"); 
-const unblockTime = 20;
+const unblockTime = 7;
 
 // Check for url matching list
 if (blockedURLs.includes(cleanHost) && unblockedHost != cleanHost) {
