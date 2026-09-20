@@ -5,5 +5,6 @@ const originalUrl = urlParams.get("to")
 
 setTimeout(() => {
     console.log("redirect now")
-    // window.location.href = originalUrl (will cause infinite redirects until unblockedHosts is working)
+    window.location.replace(originalUrl)
+    console.log("called reblock")
 }, waitTime * 1000);
