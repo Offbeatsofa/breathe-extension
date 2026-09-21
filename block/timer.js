@@ -1,5 +1,5 @@
 const FULL_DASH_ARRAY = 2 * Math.PI * 45;  // 45 is the radius of the circle in the svg viewbox
-const TOTAL_TIME = 3;
+const TOTAL_TIME = 10;
 
 const progressCircle = document.querySelector(".timer-remaining");
 progressCircle.style.strokeDasharray = FULL_DASH_ARRAY;

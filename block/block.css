@@ -55,32 +55,52 @@ circle {
 }
 
 .continueButton {
-    display: inline-block;
-    padding: 8px 15px;
-    max-width: 75px;
-    max-height: 50px;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    background-color: #394e66;
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    user-select: none;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-    :hover {
-        background-color: #283545;
-    }
-    :active {
-        transform: scale(0.98);
-    }
-    .btn:focus-visible {
-        outline: 3px solid #89c2ff;
-    }
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+  padding: 5px 10px;
+  margin-top: 15px;
+  border-radius: 100px;
+  background: #286b86;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
 }
 
-.hidden {
-    display: none;
+.continueButton:hover {
+  background: #367b96;
+}
+
+.continueButton > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.continueButton:hover svg {
+  transform: translateX(5px);
+}
+
+.continueButton:active {
+  transform: scale(0.96);
+}
+
+.continueButton:disabled {
+  background-color: #286b86;
+  filter: saturate(0%);
+  color: #000000;
+  opacity: 1;
+  cursor: not-allowed;
+  transform: none; 
+  pointer-events: none; 
+}
+
+.fade-in {
+    filter: saturate(0%);
+    transition: filter 0.75s ease-in-out;
+}
+
+.fade-in.visible {
+    filter: saturate(100%);
 }
